@@ -7,7 +7,6 @@ document.getElementById("checkForm").addEventListener("submit", async function (
   resultDiv.className = "result";
   resultDiv.textContent = "照合中...";
 
-  // 入力バリデーション（数字8〜20桁）
   if (!/^\d{8,20}$/.test(entryId)) {
     resultDiv.classList.add("unknown");
     resultDiv.textContent = "申し込み番号の形式が正しくありません。";
@@ -20,8 +19,7 @@ document.getElementById("checkForm").addEventListener("submit", async function (
     return;
   }
 
-  // 照合キーの生成（下7〜3桁 + _ + メール先頭3文字 + @の次の1文字）
-  const idSegment = entryId.slice(-7, -2); // 下7桁から3桁目まで
+  const idSegment = entryId.slice(-7, -2);
   const emailStart = email.slice(0, 3);
   const atIndex = email.indexOf("@");
   const domainInitial = email[atIndex + 1] || "x";
@@ -42,7 +40,7 @@ document.getElementById("checkForm").addEventListener("submit", async function (
 
     if (winnerKeys.has(searchKey)) {
       resultDiv.classList.add("success");
-      resultDiv.textContent = "当選している可能性があります　お問い合わせフォームから、財団あてにお問い合わせ下さい\n※お問い合わせフォーム：https://shinfdn.org/contact";
+      resultDiv.innerHTML = "当選している可能性があります。<br />お問い合わせフォームから、財団あてにお問い合わせ下さい。<br /><a href='https://shinfdn.org/contact' target='_blank' style='color:#007bff;text-decoration:underline;'>▶ お問い合わせフォームはこちら</a>";
     } else if (loserKeys.has(searchKey)) {
       resultDiv.classList.add("failure");
       resultDiv.textContent = "落選しています";
