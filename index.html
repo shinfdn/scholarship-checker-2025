@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2025年度STEM（理系）女子奨学助成金 当落照合システム</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>2025年度STEM（理系）女子奨学助成金 当落照合システム</h1>
+    <p>
+      奨学助成金応募完了時にお送りした「申し込み番号」と、登録されている「メールアドレス」を入力して「照合する」ボタンを押してください。
+    </p>
+    <form id="checkForm">
+      <label for="entryId">申し込み番号（8～20桁の数字）</label>
+      <input type="text" id="entryId" name="entryId" required pattern="\d{8,20}" placeholder="123456789" />
+
+      <label for="email">メールアドレス</label>
+      <input type="email" id="email" name="email" required placeholder="example@example.com" />
+
+      <button type="submit">照合する</button>
+    </form>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
