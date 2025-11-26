@@ -29,3 +29,30 @@ document.getElementById("checkForm").addEventListener("submit", async function (
 
   try {
     const [winnersRes, losersRes] = await Promise.all([
+      fetch("winners.json"),
+      fetch("losers.json")
+    ]);
+    const [winners, losers] = await Promise.all([
+      winnersRes.json(),
+      losersRes.json()
+    ]);
+
+    const winnerKeys = new Set(winners.map(item => item.key));
+    const loserKeys = new Set(losers.map(item => item.key));
+
+    if (winnerKeys.has(searchKey)) {
+      resultDiv.classList.add("success");
+      resultDiv.textContent = "当選している可能性があります　お問い合わせフォームから、財団あてにお問い合わせ下さい\n※お問い合わせフォーム：https://shinfdn.org/contact";
+    } else if (loserKeys.has(searchKey)) {
+      resultDiv.classList.add("failure");
+      resultDiv.textContent = "落選しています";
+    } else {
+      resultDiv.classList.add("unknown");
+      resultDiv.textContent = "応募データが見当たりません　応募時の自動返信メールをご確認の上、再度申し込み番号とメールアドレスを入力して「照合する」ボタンを押して下さい";
+    }
+  } catch (error) {
+    resultDiv.classList.add("unknown");
+    resultDiv.textContent = "データの取得中にエラーが発生しました。時間をおいて再度お試しください。";
+    console.error("Fetch error:", error);
+  }
+});
