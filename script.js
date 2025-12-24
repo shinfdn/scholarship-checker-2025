@@ -49,20 +49,7 @@ document.getElementById("checkForm").addEventListener("submit", async function (
         応募に際してお寄せいただいた想いやお時間に、心より感謝申し上げます。<br /><br />
         これからのご活躍を心より応援しております。<br /><br />
         今後も、弊財団ではSTEM分野をはじめとした挑戦を続ける皆さまを応援する機会を設けてまいりますので、引き続きご注目いただけますと幸いです。<br /><br />
-        また、このたびご応募いただいた皆さまにご参加いただけるオンラインイベントを開催いたします。<br />
-        今後の学びや進路のヒントとなる内容をご用意しておりますので、ぜひご参加ください。<br /><br />
-        ▼イベントの詳細・お申し込みはこちら<br />
-        <strong>STEMガールズトーク！〜進路選択・大学生活のリアル〜</strong><br /><br />
-        ・理系に進みたいけど、どの大学・学部を選べばいいかわからない<br />
-        ・理系に進んでから苦労したことは？ どう乗り越えたの？<br />
-        ・大学生活って実際どんな感じ？<br />
-        そんな疑問や不安を、実際にSTEM（理系）分野に進んだ大学生の先輩たちに聞いてみませんか？<br /><br />
-        受験や大学生活をリアルに経験してきた先輩と話すことで、あなたらしい進路を考えるヒントがきっと見つかるはずです。<br /><br />
-        <strong>日時：</strong>12月14日（日）20:00〜21:30<br />
-        <strong>参加方法：</strong>オンライン（Zoom）※お申込み完了後にメールでURLをお知らせします。<br />
-        <strong>定員：</strong>先着100名<br /><br />
-        <a href='https://share.hsforms.com/1al2G8hX2SIugk8bDv5uVNwr8gla' target='_blank' style='color:#007bff;text-decoration:underline;'>▶ 申込フォームはこちら</a><br /><br />
-        その他にも、皆さんの進路選択の参考になる企業オフィスツアー・大学ツアーや、オンライン座談会を開催しています。<br />
+        財団では、皆さんの進路選択の参考になる企業オフィスツアー・大学ツアーや、オンライン座談会を開催しています。<br />
         <a href='https://shinfdn.org/gms' target='_blank' style='color:#007bff;text-decoration:underline;'>▶ プログラム一覧はこちら</a><br /><br />
         LINEではいち早く新着ツアーの情報をご案内しています。<br />
         <a href='https://page.line.me/796tihkf' target='_blank' style='color:#007bff;text-decoration:underline;'>▶ LINEでフォローする</a><br /><br />
@@ -81,3 +68,4 @@ document.getElementById("checkForm").addEventListener("submit", async function (
     console.error("Fetch error:", error);
   }
 });
+
